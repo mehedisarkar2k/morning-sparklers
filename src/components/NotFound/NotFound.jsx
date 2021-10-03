@@ -4,7 +4,10 @@ import NotFoundIMG from "../../assets/notFound.png";
 
 const NotFound = () => {
   return (
-    <div className="mt-12 flex items-center justify-center flex-col">
+    <div
+      style={{ minHeight: "40vh" }}
+      className="mt-12 flex items-center justify-center flex-col"
+    >
       <h1
         style={{ fontFamily: '"Fredoka One",cursive' }}
         className="text-4xl text-center"

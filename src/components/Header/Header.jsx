@@ -4,8 +4,8 @@ import Logo from "../../assets/banner.webp";
 
 const Header = () => {
   return (
-    <nav className="py-4">
-      <ul className="flex items-center text-purple-800 font-bold text-lg">
+    <nav className="py-4  shadow-md">
+      <ul className="container mx-auto flex items-center text-purple-800 font-bold text-lg">
         <li>
           <NavLink to="/">
             <img src={Logo} alt="Kindergarten" />
@@ -44,7 +44,9 @@ const Header = () => {
 
         <li>
           <NavLink to="/enroll">
-            <button>Enroll Now</button>
+            <button className="px-4 py-2 rounded-3xl font-bold text-lg tracking-wider bg-purple-700 text-white tra duration-200 hover:bg-purple-600 hover:shadow-md">
+              Enroll Now
+            </button>
           </NavLink>
         </li>
       </ul>
