@@ -1,16 +1,29 @@
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          <FontAwesomeIcon icon={faCoffee} />
-          Hello
-        </h1>
-      </header>
+    <div className="container mx-auto">
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/home">
+            <Home />
+          </Route>
+
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
