@@ -11,8 +11,11 @@ function Nav() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img src={Logo} alt="Kindergarten" />
+              <NavLink to="/">
+                <img src={Logo} alt="Kindergarten" />
+              </NavLink>
             </div>
+
             <div className="ml-auto hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <li className=" px-3 py-2 mx-2">
@@ -65,6 +68,7 @@ function Nav() {
               </div>
             </div>
           </div>
+
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
