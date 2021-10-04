@@ -36,6 +36,16 @@ const Header = () => {
           <NavLink
             activeClassName="text-pink-500 border-b-2 border-pink-500"
             className="transition duration-150 hover:text-pink-500"
+            to="/news"
+          >
+            News
+          </NavLink>
+        </li>
+
+        <li className=" px-3 py-2 mx-2">
+          <NavLink
+            activeClassName="text-pink-500 border-b-2 border-pink-500"
+            className="transition duration-150 hover:text-pink-500"
             to="/about"
           >
             About Us

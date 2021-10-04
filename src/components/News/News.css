@@ -1,0 +1,5 @@
+.news-container {
+  min-height: 60vh;
+  background: url(./newsBg.webp) fixed center/cover no-repeat;
+  margin-bottom: -96px;
+}

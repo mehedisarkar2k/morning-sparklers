@@ -5,6 +5,7 @@ const Classes = () => {
     <div className="group transition duration-200 hover:shadow-xl rounded-3xl">
       <div className="img">
         <img
+          className="w-full"
           src="https://preview.colorlib.com/theme/kindergarten/assets/img/gallery/xclass-img2.png.pagespeed.ic.rC4vnKDqeg.webp"
           alt=""
         />
@@ -19,7 +20,7 @@ const Classes = () => {
         </p>
         <div className="mt-2 py-4 flex justify-between items-center">
           <div className="">
-            <p className="text-pink-600 text-xl">3-5</p>
+            <p className="text-pink-600 text-xl">3-5h</p>
             <h5 className="text-gray-500">Age Group</h5>
           </div>
 

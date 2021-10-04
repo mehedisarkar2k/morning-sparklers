@@ -1,0 +1,7 @@
+.review-container {
+  min-height: 40vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
