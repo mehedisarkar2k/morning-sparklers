@@ -1,27 +1,9 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Menu = () => {
-  const [menuState, setMenuState] = useState(false);
-
-  const hamburgerClick = () => {
-    setMenuState(!menuState);
-    console.log(menuState);
-  };
-
   const menuClasses = `md:ml-auto hidden md:flex flex-col md:flex-row text-purple-800 font-bold text-lg`;
   return (
     <>
-      <FontAwesomeIcon
-        className="block md:hidden z-50"
-        onClick={hamburgerClick}
-        cursor="pointer"
-        icon={faBars}
-        color="rgba(236, 72, 153)"
-        size="2x"
-      />
       <ul className={menuClasses}>
         <li className=" px-3 py-2 mx-2">
           <NavLink
