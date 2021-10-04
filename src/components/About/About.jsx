@@ -20,6 +20,7 @@ const About = () => {
       </p>
 
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        {/* loop for showing teacher data in the UI */}
         {teachers.map((teacher) => (
           <Teacher key={teacher.id} teacher={teacher} />
         ))}

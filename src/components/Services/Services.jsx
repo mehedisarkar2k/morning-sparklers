@@ -8,6 +8,7 @@ const Services = () => {
   useEffect(() => {
     const link = `https://raw.githubusercontent.com/mehedisarkar2k/morning-sparklers-data/main/datas/courses.json`;
 
+    // call the function for fetching data from the server
     getData(link, setCourses);
   }, []);
   return (
@@ -24,6 +25,7 @@ const Services = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {/* loop through all the courses */}
         {courses.map((course) => (
           <Service key={course.id} course={course} />
         ))}

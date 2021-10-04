@@ -12,9 +12,11 @@ const Home = () => {
   };
   const [courses, setCourses] = useState([]);
 
+  // fetch data from the server, when page is loaded
   useEffect(() => {
     const link = `https://raw.githubusercontent.com/mehedisarkar2k/morning-sparklers-data/main/datas/courses.json`;
 
+    // call function for fetching data
     getData(link, setCourses);
   }, []);
 

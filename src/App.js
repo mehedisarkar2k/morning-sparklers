@@ -12,9 +12,12 @@ import Services from "./components/Services/Services";
 function App() {
   return (
     <div>
+      {/* wrap all the navigated links in the  Browser router component */}
       <Router>
+        {/* Header section */}
         <Header />
 
+        {/* All the component those are main navigation component */}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -40,6 +43,7 @@ function App() {
             <Review />
           </Route>
 
+          {/* Not found component. if it is bad link, then this component will shows in the UI */}
           <Route path="*">
             <NotFound />
           </Route>
