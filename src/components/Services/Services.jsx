@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getData } from "../../functions/fetchData";
 import Service from "./Service/Service";
 
 const Services = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    const link = `https://raw.githubusercontent.com/mehedisarkar2k/morning-sparklers-data/main/datas/courses.json`;
+
+    getData(link, setCourses);
+  }, []);
   return (
     <div className="container mx-auto">
       <div className="my-12 w-3/4 mx-auto text-center text-purple-700">
@@ -16,15 +24,9 @@ const Services = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-8">
-        <Service />
-        <Service />
-        <Service />
-        <Service />
-        <Service />
-        <Service />
-        <Service />
-        <Service />
-        <Service />
+        {courses.map((course) => (
+          <Service key={course.id} course={course} />
+        ))}
       </div>
     </div>
   );

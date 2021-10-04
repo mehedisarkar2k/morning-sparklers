@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getData } from "../../functions/fetchData";
 import Teacher from "./Teacher/Teacher";
 
 const About = () => {
+  const [teachers, setTeachers] = useState([]);
+
+  useEffect(() => {
+    const link = `https://raw.githubusercontent.com/mehedisarkar2k/morning-sparklers-data/main/datas/teacher.json`;
+
+    getData(link, setTeachers);
+  }, []);
   return (
     <div className="mt-12 text-center text-purple-700">
       <h2 className="text-4xl  mb-4">Expert Teachers</h2>
@@ -12,10 +20,9 @@ const About = () => {
       </p>
 
       <div className="container mx-auto grid grid-cols-4 gap-5">
-        <Teacher />
-        <Teacher />
-        <Teacher />
-        <Teacher />
+        {teachers.map((teacher) => (
+          <Teacher key={teacher.id} teacher={teacher} />
+        ))}
       </div>
     </div>
   );

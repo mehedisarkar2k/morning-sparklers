@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getData } from "../../functions/fetchData";
 import Classes from "./Classes/Classes";
 import "./Home.css";
 
 const Home = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    const link = `https://raw.githubusercontent.com/mehedisarkar2k/morning-sparklers-data/main/datas/courses.json`;
+
+    getData(link, setCourses);
+  }, []);
+
   return (
     <>
       <div className="home-container z-10">
@@ -13,7 +22,7 @@ const Home = () => {
             <span> Learning</span>
           </h1>
           <p className="title text-yellow-400 text-3xl mb-6">For Every Child</p>
-          <button className="bg-pink-600 text-white px-6 py-3 rounded-full font-bold text-xl">
+          <button className="bg-pink-600 text-white px-6 py-3 rounded-full font-bold text-xl hover:bg-pink-500 hover:shadow-xl transition">
             Explore Classes
           </button>
         </div>
@@ -22,7 +31,7 @@ const Home = () => {
       <div className=" text-center mx-auto">
         <div className="mt-24 w-3/4 mx-auto">
           <h2 className="mb-6 text-5xl tracking-wider text-purple-700">
-            Classes We <span className="text-pink-600">Offer</span>
+            Our Recent <span className="text-pink-600">Courses</span>
           </h2>
           <p className="text-lg tracking-wide text-purple-700">
             Our set he for firmament morning sixth subdue today the darkness
@@ -32,13 +41,12 @@ const Home = () => {
         </div>
 
         <div className="mt-12 container mx-auto grid grid-cols-4 gap-6">
-          <Classes />
-          <Classes />
-          <Classes />
-          <Classes />
+          {courses.slice(0, 4).map((course) => (
+            <Classes key={course.id} course={course} />
+          ))}
         </div>
 
-        <button className="mt-10 bg-pink-600 text-white px-6 py-3 rounded-full font-bold text-xl">
+        <button className="mt-10 bg-pink-600 text-white px-6 py-3 rounded-full font-bold text-xl hover:bg-pink-500 hover:shadow-xl transition">
           See More Classes
         </button>
       </div>
