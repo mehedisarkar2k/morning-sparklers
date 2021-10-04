@@ -12,7 +12,7 @@ const Teacher = ({ teacher }) => {
         />
         <button
           style={{ transform: "translateX(-50%)" }}
-          className="bg-pink-600 text-white px-4 py-2 rounded-full font-bold text-xl mt-4 absolute -bottom-4 left-1/2 hover:bg-pink-500 hover:shadow-xl transition"
+          className="bg-pink-600 text-white px-4 py-2 rounded-full font-bold text-lg md:text-sm lg:text-lg mt-4 absolute -bottom-4 left-1/2 hover:bg-pink-500 hover:shadow-xl transition"
         >
           See Details
         </button>
