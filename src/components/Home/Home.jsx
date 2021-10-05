@@ -47,9 +47,10 @@ const Home = () => {
             Our Recent <span className="text-pink-600">Courses</span>
           </h2>
           <p className="text-lg tracking-wide text-purple-700">
-            Our set he for firmament morning sixth subdue today the darkness
-            creeping gathered divide our let god moving today. Moving in fourth
-            air night bring upon lesser subdue fowl male signs.
+            It's never too early to help your child develop their insight.
+            Children who understand their emotions grow up to have higher levels
+            of emotional intelligence, which makes verbalizing the ups and downs
+            of childhood a bit easier
           </p>
         </div>
 

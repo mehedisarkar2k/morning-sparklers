@@ -6,7 +6,12 @@ const News = () => {
     <div className="news-container py-20">
       <div className="p-12 text-center w-full md:w-2/3 mx-auto bg-white md:rounded-3xl space-y-6">
         <h4 className="text-pink-600 text-3xl">
-          {new Date().toLocaleDateString()}
+          Event ends in:{" "}
+          {new Date("Nov 15, 2021").toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })}
         </h4>
 
         <h2 className="text-purple-700 text-2xl md:text-5xl">Drawing Event</h2>

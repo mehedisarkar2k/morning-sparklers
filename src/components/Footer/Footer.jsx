@@ -17,10 +17,11 @@ const Footer = () => {
         <div className="details md:w-2/4 px-4">
           <div className="logo">
             <img src={Logo} alt="Logo" />
-            <p className="text-white text-lg">
-              Users and submit their own items. You can create different
-              packages and by connecting with your PayPal or Stripe account
-              charge users for registration.
+            <p className="text-white text-lg hidden md:block">
+              Kindergarten is the first opportunity for children to begin to
+              understand that school is a place for learning and working. They
+              will learn about sharing, taking turns, respecting the rights of
+              others, and taking care of themselves.
             </p>
 
             <div className="icons mt-5 space-x-4 w-full md:w-1/2">
@@ -71,6 +72,7 @@ const Footer = () => {
       </div>
       <h3 className="text-center mt-8 text-white text-xl">
         Copyright &copy; 2021 All rights reserved | This Site Developed by{" "}
+        <br />
         <span className="text-yellow-400">Mehedi Hasan Sarkar</span>
       </h3>
     </div>

@@ -9,7 +9,7 @@ function Nav() {
     <nav className="list-none py-2 text-purple-800 font-bold text-lg  shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="w-full flex items-center">
             <div className="flex-shrink-0">
               <NavLink to="/">
                 <img src={Logo} alt="Kindergarten" />
@@ -118,12 +118,12 @@ function Nav() {
 
       <Transition
         show={isOpen}
-        enter="transition ease-out duration-100 transform"
-        enterFrom="opacity-0 scale-95"
+        enter="transition ease-out duration-500 transform"
+        enterFrom="opacity-0 scale-90"
         enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-75 transform"
+        leave="transition ease-in duration-200 transform"
         leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
+        leaveTo="opacity-0 scale-90"
       >
         {(ref) => (
           <div className="md:hidden" id="mobile-menu">
