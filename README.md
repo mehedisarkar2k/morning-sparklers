@@ -16,7 +16,7 @@ https://morning-sparklers.netlify.app/
 
 1. Clone this repository
    ```sh
-   git clone https://github.com/ProgrammingHeroWC4/review-website-mehedisarkar2k
+   git clone git@github.com:mehedisarkar2k/morning-sparklers.git
    ```
 2. Run
    ```sh
